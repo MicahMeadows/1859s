@@ -1,0 +1,3 @@
+[0111/152611.250:ERROR:registration_protocol_win.cc(56)] CreateFile: The system cannot find the file specified. (0x2)
+[0116/152411.904:ERROR:registration_protocol_win.cc(56)] CreateFile: The system cannot find the file specified. (0x2)
+[0121/112331.757:ERROR:settings.cc(319)] Settings magic is not 1129342067
