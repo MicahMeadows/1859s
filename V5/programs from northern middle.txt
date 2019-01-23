@@ -1,0 +1,659 @@
+void skills()
+{
+    flyWheel.spin(REVERSE, 20, PCT);
+    flyWheel2.spin(REVERSE, 20, PCT);
+    combineFront.spin(FORWARD, 100, PCT);
+    
+    combineBack.spin(FORWARD, 60, PCT);
+    drive(FORWARD, 70, 850);  
+    
+    brake(250);
+    REST(1200);
+    combineBack.stop();
+    flyWheel2.stop();
+    flyWheel.stop();
+    
+    combineBack.spin(REVERSE, 100, PCT);
+    REST(250);
+    combineBack.stop();
+    fly(100);
+    combineFront.spin(REVERSE, 50, PCT);
+    drive(FORWARD, 70, 300);
+    brake(300);
+    combineFront.stop();
+
+    
+    drive(REVERSE, 70, 1300); // line up with bottom flag after pick ball
+    brake(300);
+    turn(LEFT, 50, 300); 
+    brake(300);
+    
+
+      
+    brake(300);
+    combineFront.stop();
+
+    combineBack.spin(FORWARD, 100, PCT); // 
+    flyWheel.stop();
+    flyWheel2.stop();
+    //REST(100); // inbetween cutoff time and shooting
+    REST(600);
+    combineBack.stop();
+    REST(500);
+    
+    drive(FORWARD, 70, 1150); // drive up to second cap to pick ball
+    brake(300); 
+    
+    
+    turn(RIGHT, 50, 310); // turn to flag
+    brake(300);
+    
+    flyWheel.spin(REVERSE, 20, PCT);
+    flyWheel2.spin(REVERSE, 20, PCT);
+    combineFront.spin(FORWARD, 100, PCT);
+    
+    combineBack.spin(FORWARD, 60, PCT);
+    drive(FORWARD, 70, 750);  /////// 
+    brake(250);
+    REST(750);  
+    combineBack.stop();
+    flyWheel2.stop();
+    flyWheel.stop();
+    
+    combineBack.spin(REVERSE, 100, PCT);
+    REST(250);
+    combineBack.stop();
+    combineFront.spin(REVERSE, 50, PCT);
+    drive(FORWARD, 70, 200);
+    brake(300);
+    combineFront.stop();
+    fly(100);
+    
+    drive(REVERSE, 70, 800);
+    brake(300);                 // backup to cap
+    turn(LEFT, 50, 300);
+    
+    combineFront.spin(REVERSE, 50, PCT);
+    drive(FORWARD, 80, 700);                // drop up to second cap
+    brake(300);                             // flip cap
+    combineFront.stop();
+    
+    drive(REVERSE, 50, 300);
+    brake(250);
+    
+    turn(RIGHT, 50, 290);
+    brake(250);
+    
+    drive(FORWARD, 70, 300);
+    brake(250);
+    
+    turn(LEFT, 50, 300);
+    brake(250);
+    
+    drive(FORWARD, 70, 450);
+    brake(250);
+    REST(500);
+    drive(REVERSE, 70, 350);
+    brake(250);
+    
+    combineBack.spin(FORWARD, 100, PCT); // 
+    REST(600);
+    combineBack.stop();
+    
+    
+    turn(RIGHT, 50, 290);
+    brake(300);
+    
+    combineFront.spin(REVERSE, 50, PCT);
+    drive(FORWARD, 80, 1500);
+    brake(300);
+    combineFront.stop();
+    
+    drive(REVERSE, 50, 350);
+    brake(300);
+    
+    
+    turn(LEFT, 50, 290);
+    brake(300);
+    
+    drive(FORWARD, 70, 400);
+    brake(300);
+    
+    
+    
+    
+}
+
+/////////////////////////////////////////////////////////////////////      AUTO SKILLSSSSSS
+
+
+
+
+/////////////////////////////////////////////////////////////////////     red close
+
+void redClose()
+{
+    
+    
+    flyWheel.spin(REVERSE, 20, PCT);
+    flyWheel2.spin(REVERSE, 20, PCT);
+    combineFront.spin(FORWARD, 100, PCT);
+    
+    combineBack.spin(FORWARD, 60, PCT);
+    drive(FORWARD, 70, 850);  
+    
+    brake(250);
+    REST(750);
+    combineBack.stop();
+    flyWheel2.stop();
+    flyWheel.stop();
+    
+    combineBack.spin(REVERSE, 100, PCT);
+    REST(250);
+    fly(100);
+
+    combineBack.stop();
+
+    
+    drive(REVERSE, 70, 820); // line up with bottom flag after pick ball
+    //waitDrive(REVERSE, 40, 300);
+  //  brake(300);
+   // drive(FORWARD, 20, 20);
+    brake(300);
+    turn(LEFT, 60, 300); 
+    brake(300);
+    
+
+    
+    ///// resume
+    
+    drive(REVERSE, 70, 330); // line up to shoot parallel to platform
+    brake(300);
+    combineFront.stop();
+        
+   // turn(LEFT, 30, 15);
+   // brake(300);
+    
+  
+
+    combineBack.spin(FORWARD, 100, PCT);
+    flyWheel.stop();
+    flyWheel2.stop();
+    //REST(100); // inbetween cutoff time and shooting
+    REST(600);
+    combineBack.stop();
+    REST(500);
+    drive(REVERSE, 20, 35);
+    brake(500);
+    turn(LEFT, 50, 300);
+    brake(300);
+    drive(REVERSE, 100, 1350);
+}
+
+void redCloseNoPark() //////////////////////////////////////////////// no parking red
+{
+   flyWheel.spin(REVERSE, 20, PCT);
+    flyWheel2.spin(REVERSE, 20, PCT);
+    combineFront.spin(FORWARD, 100, PCT);
+    
+    combineBack.spin(FORWARD, 60, PCT);
+    drive(FORWARD, 70, 850);  
+    
+    brake(250);
+    REST(750);
+    combineBack.stop();
+    flyWheel2.stop();
+    flyWheel.stop();
+    
+    combineBack.spin(REVERSE, 100, PCT);
+    REST(250);
+    fly(100);
+
+    combineBack.stop();
+
+    
+    drive(REVERSE, 70, 820); // line up with bottom flag after pick ball
+    //waitDrive(REVERSE, 40, 300);
+  //  brake(300);
+   // drive(FORWARD, 20, 20);
+    brake(300);
+    turn(LEFT, 60, 300); 
+    brake(300);
+    
+
+    
+    ///// resume
+    
+    drive(REVERSE, 70, 330); // line up to shoot parallel to platform
+    brake(300);
+    combineFront.stop();
+        
+   // turn(LEFT, 30, 15);
+   // brake(300);
+    
+  
+
+    combineBack.spin(FORWARD, 100, PCT);
+    flyWheel.stop();
+    flyWheel2.stop();
+    //REST(100); // inbetween cutoff time and shooting
+    REST(600);
+    combineBack.stop();
+
+    
+    
+}
+
+/////////////////////////////////////////////////////////////////////     blue close
+void blueClose()
+{
+
+    
+    flyWheel.spin(REVERSE, 20, PCT);
+    flyWheel2.spin(REVERSE, 20, PCT);
+    combineFront.spin(FORWARD, 100, PCT);
+    
+    combineBack.spin(FORWARD, 60, PCT);
+    drive(FORWARD, 70, 850);  
+    
+    brake(250);
+    REST(750);
+    combineBack.stop();
+    flyWheel2.stop();
+    flyWheel.stop();
+    
+    combineBack.spin(REVERSE, 100, PCT);
+    REST(250);
+    fly(100);
+
+    combineBack.stop();
+
+    
+    drive(REVERSE, 70, 720); // line up with bottom flag after pick ball
+    //waitDrive(REVERSE, 40, 300);
+  //  brake(300);
+   // drive(FORWARD, 20, 20);
+    brake(300);
+    turn(RIGHT, 60, 300); 
+    brake(300);
+    
+
+    
+    ///// resume
+    
+    drive(REVERSE, 70, 300); // line up to shoot parallel to platform
+    brake(300);
+    combineFront.stop();
+        
+   // turn(LEFT, 30, 15);
+   // brake(300);
+    
+  
+
+    combineBack.spin(FORWARD, 100, PCT);
+    flyWheel.stop();
+    flyWheel2.stop();
+    //REST(100); // inbetween cutoff time and shooting
+    REST(600);
+    combineBack.stop();
+    REST(500);
+    drive(REVERSE, 20, 35);
+    brake(500);
+    turn(RIGHT, 50, 300);
+    brake(300);
+    drive(REVERSE, 100, 1350);
+}
+
+/////////////////////////////////////////////////////////////////////     blue close no park
+void blueCloseNoPark()
+{
+  flyWheel.spin(REVERSE, 20, PCT);
+    flyWheel2.spin(REVERSE, 20, PCT);
+    combineFront.spin(FORWARD, 100, PCT);
+    
+    combineBack.spin(FORWARD, 60, PCT);
+    drive(FORWARD, 70, 850);  
+    
+    brake(250);
+    REST(750);
+    combineBack.stop();
+    flyWheel2.stop();
+    flyWheel.stop();
+    
+    combineBack.spin(REVERSE, 100, PCT);
+    REST(250);
+    fly(100);
+
+    combineBack.stop();
+
+    
+    drive(REVERSE, 70, 720); // line up with bottom flag after pick ball
+    //waitDrive(REVERSE, 40, 300);
+  //  brake(300);
+   // drive(FORWARD, 20, 20);
+    brake(300);
+    turn(RIGHT, 60, 300); 
+    brake(300);
+    
+
+    
+    ///// resume
+    
+    drive(REVERSE, 70, 300); // line up to shoot parallel to platform
+    brake(300);
+    combineFront.stop();
+        
+   // turn(LEFT, 30, 15);
+   // brake(300);
+    
+  
+
+    combineBack.spin(FORWARD, 100, PCT);
+    flyWheel.stop();
+    flyWheel2.stop();
+    //REST(100); // inbetween cutoff time and shooting
+    REST(600);
+    combineBack.stop();
+    
+    
+    
+}
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////// blue far
+void blueFar()
+{
+    flyWheel.spin(REVERSE, 20, PCT);
+    flyWheel2.spin(REVERSE, 20, PCT);
+    combineFront.spin(FORWARD, 100, PCT);
+    
+    combineBack.spin(FORWARD, 60, PCT);
+    drive(FORWARD, 70, 800);  
+    
+    brake(250);
+    REST(1200);
+    combineBack.stop();
+    flyWheel2.stop();
+    flyWheel.stop();
+    
+    combineBack.spin(REVERSE, 100, PCT);
+    REST(250);
+    fly(100);
+
+    combineBack.stop();
+
+    
+    drive(REVERSE, 70, 770); // line up with bottom flag after pick ball
+    waitDrive(REVERSE, 15, 1500);
+    drive(FORWARD, 20, 200);
+    brake(200);
+    
+    combineFront.stop();
+    turn(RIGHT, 50, 300); // turn right towards flag
+    brake(300);
+    
+    drive(FORWARD, 50, 450);
+    brake(300);
+    
+    turn(LEFT, 50, 70);
+    brake(300);
+    
+    flyWheel.stop();
+    flyWheel2.stop();
+    combineBack.spin(FORWARD, 100, PCT);
+    //REST(100); // inbetween cutoff time and shooting
+    REST(600);
+    combineBack.stop();
+    REST(500);
+    
+    turn(RIGHT, 50, 420);
+    brake(300);
+    drive(REVERSE, 100, 1400);
+    
+    
+    
+}
+
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////// blue far no park
+void blueFarVariation()
+{
+    flyWheel.spin(REVERSE, 20, PCT);
+    flyWheel2.spin(REVERSE, 20, PCT);
+    combineFront.spin(FORWARD, 100, PCT);
+    
+    combineBack.spin(FORWARD, 60, PCT);
+    drive(FORWARD, 70, 800);  
+    
+    brake(250);
+    REST(750);
+    combineBack.stop();
+    flyWheel2.stop();
+    flyWheel.stop();
+    
+    combineBack.spin(REVERSE, 100, PCT);
+    REST(250);
+    fly(100);
+
+    combineBack.stop();
+
+    
+    drive(REVERSE, 70, 770); // line up with bottom flag after pick ball
+    brake(300);
+    
+    combineFront.stop();
+    turn(RIGHT, 50, 190);
+    brake(300);
+    
+    flyWheel.stop();
+    flyWheel2.stop();
+    combineBack.spin(FORWARD, 100, PCT);
+    //REST(100); // inbetween cutoff time and shooting
+    REST(600);
+    combineBack.stop();
+    REST(500);
+    turn(RIGHT, 50, 70);
+    brake(300);
+    drive(FORWARD, 50, 480);
+    brake(300);
+    turn(RIGHT, 50, 290);
+    brake(300);
+    drive(REVERSE, 100, 1400);
+    
+    
+
+}
+
+
+void blueFarVariationNoPark()
+{
+    flyWheel.spin(REVERSE, 20, PCT);
+    flyWheel2.spin(REVERSE, 20, PCT);
+    combineFront.spin(FORWARD, 100, PCT);
+    
+    combineBack.spin(FORWARD, 60, PCT);
+    drive(FORWARD, 70, 800);  
+    
+    brake(250);
+    REST(750);
+    combineBack.stop();
+    flyWheel2.stop();
+    flyWheel.stop();
+    
+    combineBack.spin(REVERSE, 100, PCT);
+    REST(250);
+    fly(100);
+
+    combineBack.stop();
+
+    
+    drive(REVERSE, 70, 770); // line up with bottom flag after pick ball
+    brake(300);
+    
+    combineFront.stop();
+    turn(RIGHT, 50, 190);
+    brake(300);
+    
+    flyWheel.stop();
+    flyWheel2.stop();
+    combineBack.spin(FORWARD, 100, PCT);
+    //REST(100); // inbetween cutoff time and shooting
+    REST(600);
+    combineBack.stop();
+    
+    
+    
+
+}
+
+/////////////////////////////////////////////////////////////////////////////////////////////// red far
+void redFar()
+{
+   flyWheel.spin(REVERSE, 20, PCT);
+    flyWheel2.spin(REVERSE, 20, PCT);
+    combineFront.spin(FORWARD, 100, PCT);
+    
+    combineBack.spin(FORWARD, 60, PCT);
+    drive(FORWARD, 70, 800);  
+    
+    brake(250);
+    REST(1200);
+    combineBack.stop();
+    flyWheel2.stop();
+    flyWheel.stop();
+    
+    combineBack.spin(REVERSE, 100, PCT);
+    REST(250);
+    fly(100);
+
+    combineBack.stop();
+
+    
+    drive(REVERSE, 70, 770); // line up with bottom flag after pick ball
+    waitDrive(REVERSE, 15, 1500);
+    drive(FORWARD, 20, 200);
+    brake(200);
+    
+    combineFront.stop();
+    turn(LEFT, 50, 300); // turn right towards flag
+    brake(300);
+    
+    drive(FORWARD, 50, 420);
+    brake(300);
+    
+    turn(RIGHT, 50, 75);
+    brake(300);
+    
+    flyWheel.stop();
+    flyWheel2.stop();
+    combineBack.spin(FORWARD, 100, PCT);
+    //REST(100); // inbetween cutoff time and shooting
+    REST(600);
+    combineBack.stop();
+    REST(500);
+    
+    turn(LEFT, 50, 410);
+    brake(300);
+    drive(REVERSE, 100, 1400);
+
+}
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////// red far no park 
+void redFarVariation()
+{
+  flyWheel.spin(REVERSE, 20, PCT);
+    flyWheel2.spin(REVERSE, 20, PCT);
+    combineFront.spin(FORWARD, 100, PCT);
+    
+    combineBack.spin(FORWARD, 60, PCT);
+    drive(FORWARD, 70, 800);  
+    
+    brake(250);
+    REST(750);
+    combineBack.stop();
+    flyWheel2.stop();
+    flyWheel.stop();
+    
+    combineBack.spin(REVERSE, 100, PCT);
+    REST(250);
+    fly(100);
+
+    combineBack.stop();
+
+    
+    drive(REVERSE, 70, 770); // line up with bottom flag after pick ball
+    brake(300);
+    
+    combineFront.stop();
+    turn(LEFT, 50, 190);
+    brake(300);
+    
+    flyWheel.stop();
+    flyWheel2.stop();
+    combineBack.spin(FORWARD, 100, PCT);
+    //REST(100); // inbetween cutoff time and shooting
+    REST(600);
+    combineBack.stop();
+    REST(500);
+    turn(LEFT, 50, 70);
+    brake(300);
+    drive(FORWARD, 50, 480);
+    brake(300);
+    turn(LEFT, 50, 290);
+    brake(300);
+    drive(REVERSE, 100, 1400);
+    
+    
+}
+
+void redFarVariationNoPark()
+{
+  flyWheel.spin(REVERSE, 20, PCT);
+    flyWheel2.spin(REVERSE, 20, PCT);
+    combineFront.spin(FORWARD, 100, PCT);
+    
+    combineBack.spin(FORWARD, 60, PCT);
+    drive(FORWARD, 70, 800);  
+    
+    brake(250);
+    REST(750);
+    combineBack.stop();
+    flyWheel2.stop();
+    flyWheel.stop();
+    
+    combineBack.spin(REVERSE, 100, PCT);
+    REST(250);
+    fly(100);
+
+    combineBack.stop();
+
+    
+    drive(REVERSE, 70, 770); // line up with bottom flag after pick ball
+    brake(300);
+    
+    combineFront.stop();
+    turn(LEFT, 50, 190);
+    brake(300);
+    
+    flyWheel.stop();
+    flyWheel2.stop();
+    combineBack.spin(FORWARD, 100, PCT);
+    //REST(100); // inbetween cutoff time and shooting
+    REST(600);
+    combineBack.stop();
+    REST(500);
+    
+    
+    ///////break
+    
+    turn(RIGHT, 60, 350);
+    brake(300);
+    combineFront.spin(REVERSE, 65, PCT);
+    drive(FORWARD,80, 500);
+    bow(FORWARD, 10, FORWARD, 80, 350);
+    brake(300);
+    drive(FORWARD, 60, 100);
+    brake(300);
+}
