@@ -5,7 +5,6 @@
 #include "../functions/turn_encoder.cpp"
 
 
-void test001
+void test001()
 {
-  forward(200);
 }

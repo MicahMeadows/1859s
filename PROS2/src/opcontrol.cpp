@@ -17,7 +17,7 @@ void opcontrol() {
 		rightRear.move(right);
 
 
-		/* ----------------------------------------------------------------------------TEL FLYWHEEL------------- */
+		/* ----------------------------------------------------------------------------FLYWHEEL------------- */
 		if(master.get_digital(pros::E_CONTROLLER_DIGITAL_L1)
 				&& !master.get_digital(pros::E_CONTROLLER_DIGITAL_R2))
 		{
@@ -40,7 +40,7 @@ void opcontrol() {
 
 
 
-		/* ---------------------------------------------------------------------TEL COMBINE----------------*/
+		/* ---------------------------------------------------------------------COMBINE----------------*/
 		if(!master.get_digital(pros::E_CONTROLLER_DIGITAL_LEFT)
 				&& !master.get_digital(pros::E_CONTROLLER_DIGITAL_L2)
 				&& !master.get_digital(pros::E_CONTROLLER_DIGITAL_R2))
@@ -49,7 +49,7 @@ void opcontrol() {
 		}
 
 
-		/* -----------------------------------------------------------------------TEL LIFT---------------------*/
+		/* -----------------------------------------------------------------------LIFT---------------------*/
 		if(master.get_digital(pros::E_CONTROLLER_DIGITAL_R1))
 		{
 			lift.move(LIFT_UP_SPEED);

@@ -4,7 +4,7 @@
 #include "../functions/drive_encoder.cpp"
 #include "../functions/turn_encoder.cpp"
 
-void test001
-{
 
+void test001()
+{
 }
