@@ -8,10 +8,10 @@
 #define MIDDLE_FLAG_SPEED 80
 
 #define COMBINE_INTAKE_SPEED 80
-#define REVERSE_FLIP_SPEED 60
+#define REVERSE_FLIP_SPEED -60
 
 #define LIFT_UP_SPEED 127
-#define LIFT_CLR_SPEED 70
+#define LIFT_CLR_SPEED -70
 
 #define LEFT -1
 #define RIGHT 1
