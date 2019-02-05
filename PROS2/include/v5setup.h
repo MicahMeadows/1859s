@@ -11,7 +11,6 @@
 #define LIFT_CLR_SPEED 70
 
 
-
 /* brake defintions */
 #define COAST pros::E_MOTOR_BRAKE_COAST
 #define HOLD pros::E_MOTOR_BRAKE_HOLD
@@ -30,7 +29,6 @@
 #define PORT_FLYWHEEL2 4
 
 
-
 /* setup intake */
 #define PORT_COMBINE_FRONT 10
 #define PORT_COMBINE_REAR 6
@@ -39,14 +37,22 @@
 // setup motors
 pros::Controller master(pros::E_CONTROLLER_MASTER);
 
-pros::Motor leftFront(PORT_DRIVE_LEFT_FRONT);
-pros::Motor leftRear(PORT_DRIVE_LEFT_REAR);
+// not sure what encoder variable to use so try different ones
+pros::Motor leftFront (PORT_DRIVE_LEFT_FRONT, pros::E_MOTOR_GEARSET_18, false, pros::E_MOTOR_ENCODER_DEGREES);
+pros::Motor leftRear (PORT_DRIVE_LEFT_REAR, pros::E_MOTOR_GEARSET_18, false, pros::E_MOTOR_ENCODER_DEGREES);
+pros::Motor rightFront (PORT_DRIVE_RIGHT_FRONT, pros::E_MOTOR_GEARSET_18, true, pros::E_MOTOR_ENCODER_DEGREES); // reverse
+pros::Motor rightRear (PORT_DRIVE_RIGHT_REAR, pros::E_MOTOR_GEARSET_18, true, pros::E_MOTOR_ENCODER_DEGREES); // reverse
 
-pros::Motor rightFront(PORT_DRIVE_RIGHT_FRONT);
-pros::Motor rightRear(PORT_DRIVE_RIGHT_REAR);
+//pros::Motor leftFront(PORT_DRIVE_LEFT_FRONT);
+//pros::Motor leftRear(PORT_DRIVE_LEFT_REAR);
+//pros::Motor rightFront(PORT_DRIVE_RIGHT_FRONT); // reverse
+//pros::Motor rightRear(PORT_DRIVE_RIGHT_REAR); // reverse
 
-pros::Motor flyWheel1(PORT_FLYWHEEL1);
-pros::Motor flyWheel2(PORT_FLYWHEEL2);
+//not sure what color cartrige so check before download
+pros::Motor flyWheel1(PORT_FLYWHEEL1, pros::E_MOTOR_GEARSET_18, true, pros::E_MOTOR_ENCODER_DEGREES); // reverse
+pros::Motor flyWheel2(PORT_FLYWHEEL2, pros::E_MOTOR_GEARSET_18, false, pros::E_MOTOR_ENCODER_DEGREES);
 
-pros::Motor combine(PORT_COMBINE_FRONT);
-pros::Motor lift(PORT_COMBINE_REAR);
+
+//double check gear cartriges
+pros::Motor combine(PORT_COMBINE_FRONT, pros::E_MOTOR_GEARSET_06, false, pros::E_MOTOR_ENCODER_DEGREES);
+pros::Motor lift(PORT_COMBINE_FRONT, pros::E_MOTOR_GEARSET_018, false, pros::E_MOTOR_ENCODER_DEGREES);

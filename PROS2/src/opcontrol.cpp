@@ -19,20 +19,20 @@ void opcontrol() {
 				&& !master.get_digital(pros::E_CONTROLLER_DIGITAL_R2))
 		{
 			// flip these 2 if flywheel spins backwards
-			flyWheel1.move(-TOP_FLAG_SPEED);
-			flyWheel2.move(TOP_FLAG_SPEED);
+			flyWheel1.move(TOP_FLAG_SPEED);
+			flyWheel2.move(-TOP_FLAG_SPEED);
 			combine.move(COMBINE_INTAKE_SPEED);
 		}
 		else if(master.get_digital(pros::E_CONTROLLER_DIGITAL_L2))
 		{
-			flyWheel1.move(-TOP_FLAG_SPEED);
-			flyWheel2.move(TOP_FLAG_SPEED);
+			flyWheel1.move(TOP_FLAG_SPEED);
+			flyWheel2.move(-TOP_FLAG_SPEED);
 			combine.move(-REVERSE_FLIP_SPEED);
 		}
 		else if(master.get_digital(pros::E_CONTROLLER_DIGITAL_R2))
 		{
-				flyWheel1.move(-MIDDLE_FLAG_SPEED);
-				flyWheel2.move(MIDDLE_FLAG_SPEED);
+				flyWheel1.move(MIDDLE_FLAG_SPEED);
+				flyWheel2.move(-MIDDLE_FLAG_SPEED);
 		}
 
 
@@ -60,6 +60,7 @@ void opcontrol() {
 		{
 			lift.move(0);
 		}
+		
 	// save brain cells
  	pros::delay(20);
 	}
