@@ -20,11 +20,15 @@ void line(int target, float factor)
   float pTerm, iTerm, dTerm;
   float power;
 
-  //
-  // set rotation of hein encoders to zero
-  //
+// zero motors fix if this is not correct method
+  leftFront.tare_position();
+  leftRear.tare_position();
+  rightFront.tare_position();
+  rightRear.tare_position();
 
-  while(abs(LENCO) < target) // left encoder  < target
+
+
+  while(std::abs(LENCO) < target) // left encoder  < target
   {
     error = target - std::abs(LENCO);
    // errorTot += error;
@@ -50,41 +54,26 @@ void line(int target, float factor)
     rightFront.move(power);
     leftRear.move(power);
 
-  //  leftFront.spin(dir, power, PCT);
-  //  RightMotor.spin(dir, power , PCT);
-  //  LeftMotorR.spin(dir, power, PCT);
-  //  RightMotorR.spin(dir, power , PCT);
     pros::Task::delay(20);
 
-   // Brain.Screen.clearScreen();
-   // Brain.Screen.printAt(1, 40, "ERROR: %f", error);
-   // Brain.Screen.printAt(1, 100, "power %f", power);
+
     }
-    RightMotor.stop();
-        RightMotor.setStopping(vex::brakeType::brake);
 
+    leftFront.move(0);
+    rightFront.move(0);
+    // SET STOPPING TO BRAKE
 
-    LeftMotor.stop();
-        LeftMotor.setStopping(vex::brakeType::brake);
+    leftRear.move(0);
+    rightRear.move(0);
+    // SET STOPPING TO BRAKE
 
+    pros::Task::delay(100);
 
-    RightMotorR.stop();
-        RightMotorR.setStopping(vex::brakeType::brake);
+    // SET STOPPING TO COAST FOR ALL
 
+    leftFront.tare_position();
+    leftRear.tare_position();
+    rightFront.tare_position();
+    rightRear.tare_position();
 
-    LeftMotorR.stop();
-        LeftMotorR.setStopping(vex::brakeType::brake);
-
-
-
-    REST(100);
-    RightMotor.setStopping(vex::brakeType::coast);
-    LeftMotorR.setStopping(vex::brakeType::coast);
-    RightMotorR.setStopping(vex::brakeType::coast);
-    LeftMotor.setStopping(vex::brakeType::coast);
-    LeftMotor.setRotation(0, vex::rotationUnits::deg);
-    RightMotor.setRotation(0, vex::rotationUnits::deg);
-    LeftMotorR.setRotation(0, vex::rotationUnits::deg);
-    RightMotorR.setRotation(0, vex::rotationUnits::deg);
-  }
 }
