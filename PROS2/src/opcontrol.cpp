@@ -1,9 +1,8 @@
 #include "main.h"
-#include<cmath>
-#include<string>
-#include<cstdlib>
-
 #include "v5setup.h"
+
+
+
 #include "../functions/dzCorrect.cpp"
 
 void opcontrol() {
