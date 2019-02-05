@@ -1,5 +1,16 @@
 #include "main.h"
 
+//preset speeds
+#define TOP_FLAG_SPEED 127
+#define MIDDLE_FLAG_SPEED 80
+
+#define COMBINE_INTAKE_SPEED 80
+#define REVERSE_FLIP_SPEED 60
+
+#define LIFT_UP_SPEED 127
+#define LIFT_CLR_SPEED 70
+
+
 
 /* brake defintions */
 #define COAST pros::E_MOTOR_BRAKE_COAST
@@ -17,6 +28,7 @@
 /* setup flywheel */
 #define PORT_FLYWHEEL1 15
 #define PORT_FLYWHEEL2 4
+
 
 
 /* setup intake */
