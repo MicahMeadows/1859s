@@ -13,7 +13,10 @@ void opcontrol() {
 		rightFront.move(right);
 		rightRear.move(right);
 
-		if(master.get_digital(pros::E_CONTROLLER_DIGITAL_L1) && !master.get_digital(pros::E_CONTROLLER_DIGITAL_R2))
+
+		/* ----------------------------------------------------------------------------TEL FLYWHEEL------------- */
+		if(master.get_digital(pros::E_CONTROLLER_DIGITAL_L1)
+				&& !master.get_digital(pros::E_CONTROLLER_DIGITAL_R2))
 		{
 			// flip these 2 if flywheel spins backwards
 			flyWheel1.move(-TOP_FLAG_SPEED);
@@ -31,10 +34,19 @@ void opcontrol() {
 				flyWheel1.move(-MIDDLE_FLAG_SPEED);
 				flyWheel2.move(MIDDLE_FLAG_SPEED);
 		}
-		if(!master.get_digital(pros::E_CONTROLLER_DIGITAL_LEFT) && !master.get_digital(pros::E_CONTROLLER_DIGITAL_L2) && !master.get_digital(pros::E_CONTROLLER_DIGITAL_R2))
+
+
+
+		/* ---------------------------------------------------------------------TEL COMBINE----------------*/
+		if(!master.get_digital(pros::E_CONTROLLER_DIGITAL_LEFT)
+				&& !master.get_digital(pros::E_CONTROLLER_DIGITAL_L2)
+				&& !master.get_digital(pros::E_CONTROLLER_DIGITAL_R2))
 		{
 				combine.move(0);
 		}
+
+
+		/* -----------------------------------------------------------------------TEL LIFT---------------------*/
 		if(master.get_digital(pros::E_CONTROLLER_DIGITAL_R1))
 		{
 			lift.move(LIFT_UP_SPEED);
@@ -43,7 +55,8 @@ void opcontrol() {
 		{
 			lift.move(-LIFT_CLR_SPEED);
 		}
-		else if(!master.get_digital(pros::E_CONTROLLER_DIGITAL_R1) && !master.get_digital(pros::E_CONTROLLER_DIGITAL_A))
+		else if(!master.get_digital(pros::E_CONTROLLER_DIGITAL_R1)
+				&& !master.get_digital(pros::E_CONTROLLER_DIGITAL_A))
 		{
 			lift.move(0);
 		}
