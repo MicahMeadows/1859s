@@ -1,4 +1,8 @@
 #include "main.h"
+#include<cmath>
+#include<string>
+#include<cstdlib>
+
 #include "v5setup.h"
 #include "../functions/dzCorrect.cpp"
 
@@ -60,7 +64,7 @@ void opcontrol() {
 		{
 			lift.move(0);
 		}
-		
+
 	// save brain cells
  	pros::delay(20);
 	}

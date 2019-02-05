@@ -16,6 +16,9 @@
 #define HOLD pros::E_MOTOR_BRAKE_HOLD
 #define BRAKE pros::E_MOTOR_BRAKE_BRAKE
 
+/* encoders macros */
+#define LENCO leftRear.get_encoder_units();
+#define RENCO rightRear.get_encoder_units();
 
 /* setup drive */
 #define PORT_DRIVE_LEFT_FRONT 11
