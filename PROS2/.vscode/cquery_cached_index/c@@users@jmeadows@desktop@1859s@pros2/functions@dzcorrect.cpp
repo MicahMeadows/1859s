@@ -1,5 +1,5 @@
 #include "main.h"
-#include "v5setup.h"
+#include "v5setup.hpp"
 
 int dzCorrect(int dz, int side)  // USER CONTROL
 {

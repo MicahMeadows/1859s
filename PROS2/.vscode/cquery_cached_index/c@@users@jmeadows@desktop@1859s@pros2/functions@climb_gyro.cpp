@@ -1,5 +1,5 @@
 #include "main.h"
-#include "v5setup.h"
+#include "v5setup.hpp"
 
 void gyro_climb(int speed, int ang, int delay, int calibrateDelay = 0)
 {
