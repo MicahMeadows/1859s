@@ -1,3 +1,5 @@
+#include "main.h"
+
 
 //setup drive
 #define PORT_DRIVE_LEFT_FRONT 11
@@ -12,3 +14,11 @@
 //setup intake
 #define PORT_COMBINE_FRONT 10
 #define PORT_COMBINE_REAR 6
+
+pros::Controller master(pros::E_CONTROLLER_MASTER);
+
+pros::Motor drive_leftFront(PORT_DRIVE_LEFT_FRONT);
+pros::Motor drive_leftRear(PORT_DRIVE_LEFT_REAR);
+
+pros::Motor drive_rightFront(PORT_DRIVE_RIGHT_FRONT);
+pros::Motor drive_rightRear(PORT_DRIVE_RIGHT_REAR);

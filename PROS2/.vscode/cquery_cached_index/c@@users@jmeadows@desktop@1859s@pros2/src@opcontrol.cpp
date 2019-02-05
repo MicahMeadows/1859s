@@ -6,10 +6,7 @@
 
 
 void opcontrol() {
-	pros::Controller master(pros::E_CONTROLLER_MASTER);
 
-	pros::Motor drive_left(PORT_DRIVE_LEFT_FRONT);
-	pros::Motor drive_right(PORT_DRIVE_RIGHT_FRONT);
 
 
 
@@ -26,8 +23,12 @@ void opcontrol() {
 
 		// sets right drive and left drive to ints right and left which
 		// are found above my the joysticks
-		drive_left.move(left);
-		drive_right.move(right);
+		drive_leftFront.move(left);
+		drive_leftRear.move(left);
+
+		drive_rightFront.move(right);
+		drive_rightRear.move(right);
+		
 		pros::delay(20);
 
 
