@@ -4,11 +4,12 @@
 #include<string>
 #include<cstdlib>
 
-void line(int target, float factor)
+void line(int dir, int target, float factor)
 {
-  //
-  // set all motors to coast here
-  //
+  leftFront.set_brake_mode(pros::E_MOTOR_BRAKE_COAST);
+  rightFront.set_brake_mode(pros::E_MOTOR_BRAKE_COAST);
+  leftRear.set_brake_mode(pros::E_MOTOR_BRAKE_COAST);
+  rightRear.set_brake_mode(pros::E_MOTOR_BRAKE_COAST);
 
   float kP = .25;
   float kI = .0005;
@@ -47,7 +48,7 @@ void line(int target, float factor)
     dTerm = kD * (error - errorLast);
     errorLast = error;
 
-    power = (pTerm + iTerm + dTerm) * factor;
+    power = ((pTerm + iTerm + dTerm) * factor) * dir;
 
     leftFront.move(power);
     leftRear.move(power);
@@ -55,25 +56,42 @@ void line(int target, float factor)
     leftRear.move(power);
 
     pros::Task::delay(20);
-
-
     }
 
     leftFront.move(0);
     rightFront.move(0);
     // SET STOPPING TO BRAKE
+    leftFront.set_brake_mode(pros::E_MOTOR_BRAKE_BRAKE);
+    rightFront.set_brake_mode(pros::E_MOTOR_BRAKE_BRAKE);
 
     leftRear.move(0);
     rightRear.move(0);
     // SET STOPPING TO BRAKE
+    leftRear.set_brake_mode(pros::E_MOTOR_BRAKE_BRAKE);
+    rightRear.set_brake_mode(pros::E_MOTOR_BRAKE_BRAKE);
 
     pros::Task::delay(100);
 
     // SET STOPPING TO COAST FOR ALL
+    leftFront.set_brake_mode(pros::E_MOTOR_BRAKE_COAST);
+    rightFront.set_brake_mode(pros::E_MOTOR_BRAKE_COAST);
+    leftRear.set_brake_mode(pros::E_MOTOR_BRAKE_COAST);
+    rightRear.set_brake_mode(pros::E_MOTOR_BRAKE_COAST);
+
 
     leftFront.tare_position();
     leftRear.tare_position();
     rightFront.tare_position();
     rightRear.tare_position();
 
+}
+
+void forward(int target, float factor = 1)
+{
+  line(FORWARD, target, factor);
+}
+
+void reverse(int target, float factor = 1)
+{
+  line(REVERSE, target, factor);
 }

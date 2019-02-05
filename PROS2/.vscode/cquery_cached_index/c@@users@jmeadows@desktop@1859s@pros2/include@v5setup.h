@@ -10,6 +10,11 @@
 #define LIFT_UP_SPEED 127
 #define LIFT_CLR_SPEED 70
 
+#define LEFT -1
+#define RIGHT 1
+#define FORWARD 1
+#define REVERSE -1
+
 
 /* brake defintions */
 #define COAST pros::E_MOTOR_BRAKE_COAST
@@ -61,4 +66,4 @@ pros::Motor flyWheel2(PORT_FLYWHEEL2, pros::E_MOTOR_GEARSET_18, false, pros::E_M
 
 //double check gear cartriges
 pros::Motor combine(PORT_COMBINE_FRONT, pros::E_MOTOR_GEARSET_06, false, pros::E_MOTOR_ENCODER_DEGREES);
-pros::Motor lift(PORT_COMBINE_FRONT, pros::E_MOTOR_GEARSET_018, false, pros::E_MOTOR_ENCODER_DEGREES);
+pros::Motor lift(PORT_COMBINE_FRONT, pros::E_MOTOR_GEARSET_18, false, pros::E_MOTOR_ENCODER_DEGREES);

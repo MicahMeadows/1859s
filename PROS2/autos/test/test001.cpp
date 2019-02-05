@@ -1,5 +1,5 @@
 #include "../../include/main.h"
 
-void test1(){
+void test001(){
 
 }
