@@ -1,12 +1,8 @@
 #include "main.h"
-#include "motorsetup.h"
-
-
-
-
+#include "v5setup.h"
+#include "../functions/dzCorrect.cpp"
 
 void opcontrol() {
-
 
 
 
@@ -18,17 +14,27 @@ void opcontrol() {
 
 
 		// sets int right and left to right and left joysticks
-		int left = master.get_analog(pros::E_CONTROLLER_ANALOG_LEFT_Y);
-		int right = master.get_analog(pros::E_CONTROLLER_ANALOG_RIGHT_Y);
+		//int left = master.get_analog(pros::E_CONTROLLER_ANALOG_LEFT_Y);
+		//int right = master.get_analog(pros::E_CONTROLLER_ANALOG_RIGHT_Y);
 
 		// sets right drive and left drive to ints right and left which
-		// are found above my the joysticks
-		drive_leftFront.move(left);
-		drive_leftRear.move(left);
+		// are found above my the joystick
 
-		drive_rightFront.move(right);
-		drive_rightRear.move(right);
-		
+
+//sets ints for right and left motor based on dead zone correction function
+/* tank drive */		int left = dzCorrect(15, -1);
+/* tank drive */		int right = dzCorrect(15, 1);
+/* tank drive */
+/* tank drive */		leftFront.move(left);
+/* tank drive */		leftRear.move(left);
+/* tank drive */
+/* tank drive */		rightFront.move(right);
+/* tank drive */		rightRear.move(right);
+
+
+
+
+
 		pros::delay(20);
 
 
